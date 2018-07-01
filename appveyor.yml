@@ -20,21 +20,19 @@ init:
   - git config --global core.autocrlf input
 
 install:
-   - echo 'install'
- # - ps: Install-Product node 8 x64
- # - git reset --hard HEAD
- # - yarn
- # - node --version
+  - echo 'install'
+  - ps: Install-Product node 8 x64
+  - git reset --hard HEAD
+  - yarn
+  - node --version
 
 build_script:
-  - echo 'build'
-  # - yarn test
-  # - yarn build
+  - yarn build
 
 test: off
 
 artifacts:
-- path: setup.exe
+- path: build\*.exe
   name: setup
   
 deploy:
