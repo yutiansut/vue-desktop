@@ -1,6 +1,6 @@
 {
   "name": "my-project",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "author": "Youze Tang <tangyouze@gmail.com>",
   "description": "An electron-vue project",
   "license": null,
