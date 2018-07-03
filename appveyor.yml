@@ -21,18 +21,19 @@ init:
 
 install:
   - echo 'install'
-  - ps: Install-Product node 8 x64
-  - git reset --hard HEAD
-  - yarn
-  - node --version
+  #- ps: Install-Product node 8 x64
+  #- git reset --hard HEAD
+  #- yarn
+  #- node --version
 
 build_script:
-  - yarn build
+  - echo build
+  # - yarn build
 
 test: off
 
 artifacts:
-- path: build\*.exe
+- path: setup.exe
   name: setup
   
 deploy:
