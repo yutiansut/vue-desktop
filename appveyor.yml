@@ -45,7 +45,7 @@ artifacts:
   name: setup
   
 deploy:
-  release: release-v$(appveyor_build_version)
+  release: release-$(APPVEYOR_REPO_TAG_NAME)
   tag: $(APPVEYOR_REPO_TAG_NAME)
   provider: GitHub
   auth_token:
