@@ -2,6 +2,8 @@
 # https://simulatedgreg.gitbooks.io/electron-vue/content/en/testing.html#on-the-subject-of-ci-testing
 # version: 0.1.{build}
 
+version: {APPVEYOR_REPO_TAG_NAME}
+
 skip_non_tags: true
 
 branches:
@@ -38,14 +40,14 @@ artifacts:
 - path: setup.exe
   name: setup
   
-#deploy:
-#  release: vue-v$(appveyor_build_version)
-#  provider: GitHub
-#  auth_token:
-#    secure: "7tRGMOtHB6ntAzZ7kV2d66BoP4CDV5gOYZSopCzKIi1uK8qRFL6olshZ4VUig0e3"
-#  artifact: setup
-#  draft: false
-#  prerelease: false
-  # on:
+deploy:
+  release: vue-v$(appveyor_build_version)
+  provider: GitHub
+  auth_token:
+    secure: "7tRGMOtHB6ntAzZ7kV2d66BoP4CDV5gOYZSopCzKIi1uK8qRFL6olshZ4VUig0e3"
+  artifact: setup
+  draft: false
+  prerelease: false
+ # on:
     # appveyor_repo_tag: true
   
